@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/esbstreams/404players/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/esbstreams/404players/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://404players.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://404players.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://404players.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://404players.github.io/site.webmanifest">
+    <style type="text/css">.body{margin:0;padding:0;border:0;background:#000;}</style>
+  </head>
+  <body>
+  	<div
+      id="cinemaplayer"
+      data-cinemaplayer-tabs-top="15px"
+      data-cinemaplayer-tabs-left="15px"
+      data-cinemaplayer-tabs-right=""
+  	></div>
+    <script>
+    	var id = 'tt' + window.location.pathname.replace(/[^0-9]/ig, '');
+    	var player = document.getElementById('cinemaplayer');
+    	player.setAttribute(
+    		'data-cinemaplayer-api',
+    		'https://404players.gitlab.io/' + id + '.json'
+    	);
+    	var js = document.createElement('script');
+	    js.type = 'text/javascript';
+	    js.src = 'https://404players.github.io/404players.js';
+	    document.body.appendChild(js);
+	    document.title = id;
+    </script>
+  </body>
+</html>
